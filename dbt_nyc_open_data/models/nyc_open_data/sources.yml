@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: nyc_open_data
+    database: nycopendata
+    description: NYC Open Data - 311 Service Requests
+    schema: raw
+    tables:
+      - name: 311_service_requests
+        columns:
+          - name: unique_key
+            description: Primary key of the table
+            tests:
+              - not_null
+              - unique

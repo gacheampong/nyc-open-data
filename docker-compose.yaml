@@ -1,0 +1,14 @@
+services:
+  open-data-postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      POSTGRES_DB: ${PG_DATABASE}
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "dbt"]
+      interval: 5s
+      retries: 5
+    restart: always
+    ports:
+      - "5432:5432"

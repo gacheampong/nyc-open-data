@@ -1,0 +1,12 @@
+
+
+version: 2
+
+models:
+  - name: nyc_open_data__311_requests
+    config:
+      tags: ['nyc_open_data']
+    columns:
+      - name: borough
+        tests:
+          - not_null

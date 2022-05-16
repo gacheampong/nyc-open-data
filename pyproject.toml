@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "nyc_open_data"
+version = "0.1.0"
+description = "ELT project for NYC Open Data"
+authors = ["Glen Acheampong <glen.a.acheampong@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.27.1"
+python-dotenv = "^0.20.0"
+boto3 = "^1.23.0"
+pandas = "^1.1.5"
+pyhumps = "^3.7.1"
+SQLAlchemy = "^1.4.36"
+psycopg2 = "^2.9.3"
+dbt-postgres = "^1.1.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
